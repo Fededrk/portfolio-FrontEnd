@@ -11,8 +11,8 @@ export class TagsService {
   ) {}
 
   getAll(): Observable<[string]> {
-    return this.apiService.get('/tags')
-          .pipe(map(data => data.tags));
+    return this.apiService.get('/skills')
+          .pipe(map(data => data));
   }
 
 }
