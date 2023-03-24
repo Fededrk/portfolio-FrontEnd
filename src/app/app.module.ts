@@ -1,28 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//RUTAS
+import { app_routing } from './app.routes';
 
-import { AppComponent } from './app.component';
-import { AuthModule } from './auth/auth.module';
-import { HomeModule } from './home/home.module';
-import {
-  FooterComponent,
-  HeaderComponent,
-  SharedModule
-} from './shared';
+//Componentes
+
 import { AppRoutingModule } from './app-routing.module';
-import { CoreModule } from './core/core.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { PortafolioComponent } from './components/portafolio/portafolio.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent],
-  imports: [
-    BrowserModule,
-    CoreModule,
-    SharedModule,
-    HomeModule,
-    AuthModule,
-    AppRoutingModule
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoginComponent,
+    PortafolioComponent,
   ],
+  imports: [BrowserModule, AppRoutingModule, app_routing],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
