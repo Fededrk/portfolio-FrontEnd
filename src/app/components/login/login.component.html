@@ -7,21 +7,21 @@
                     <span class="icon">
                         <!-- <ion-icon name="mail-outline"></ion-icon> -->
                     </span>
-                    <input type="email" required>
+                    <input type= "email" (change)="setUsername($event)" [value]="username" required>
                     <label for="">E-mail</label>
                 </div>
                 <div class="inputbox">
                     <span class="icon">
                         <!-- <ion-icon name="eye-off-outline"></ion-icon> -->
                     </span>
-                    <input type="password" required>
+                    <input type="password" (change)="setPassword($event)" [value]="password" required>
                     <label for="">Contraseña</label>
                 </div>
                 <div class="forget">
                     <label><input type="checkbox">Recuerdame</label>
                     <a href="#">Olvido Contraseña?</a>
                 </div>
-                <button type="submit" class="btn">Log in</button>
+                <button type="button" class="btn" (click)="login()">Log in</button>
                 <div class="register">
                     <p>No tiene cuenta?</p>
                     <a href="#">Registrarse</a>
